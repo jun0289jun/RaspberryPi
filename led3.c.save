@@ -1,0 +1,51 @@
+Y#include <stdio.h>
+#include <wiringPi.h>
+
+
+
+
+#define LedPin1 0
+#define LedPin2 2
+#define LedPin3 3
+
+
+
+int main(void) {
+
+	if(wiringPiSetup() == -1){
+
+		printf("setup wiringPi failed !");
+
+		return 1;
+
+	}
+
+	printf("linker LedPin : GPIO %d(wiringPi pin\n", LedPin1);
+	printf("linker LedPin : GPIO %d(wiringPi pin\n", LedPin2);
+	printf("linker LedPin : GPIO %d(wiringPi pin\n", LedPin3);
+
+	pinMode(LedPin1, OUTPUT);
+	pinMode(LedPin2, OUTPUT);
+	pinMode(LedPin3, OUTPUT);
+
+	
+
+	while(1){
+
+		digitalWrite(LedPin1, HIGH);
+
+		printf("LED ON...\n");
+
+		delay(500);
+
+		digitalWrite(LedPin1, LOW);
+
+		printf("LED OFF...\n");
+
+		delay(500);
+
+	}
+
+	return 0;
+
+}
