@@ -91,7 +91,7 @@ int main( void )
 	while ( 1 )
 	{
 		read_dht_data();
-		delay( 2000 ); /* wait 2 seconds before next read */
+		delay( 4000 ); /* wait 4 seconds before next read */
 	}
  
 	return(0);
